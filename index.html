@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Note Synthesizer - Academic Knowledge Compiler</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Master Note Synthesizer</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#upload">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Study Materials into <span class="gradient-text">Master Notes</span></h1>
+                <p class="hero-subtitle">
+                    Upload your syllabus and study materials. Our AI-powered synthesizer analyzes, 
+                    cross-references, and compiles everything into a single, comprehensive, 
+                    publication-ready PDF.
+                </p>
+                <div class="hero-cta">
+                    <a href="#upload" class="btn btn-primary">Start Synthesizing</a>
+                    <a href="#how-it-works" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">File Types Supported</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Syllabus Aligned</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">PDF</span>
+                        <span class="stat-label">Ready Output</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Powerful Features</h2>
+            <p class="section-subtitle">Everything you need to create comprehensive study notes</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Multi-Format Support</h3>
+                    <p>Upload PDF, PPTX, DOCX, textbooks, and even scanned handwritten notes. Our system handles them all.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Syllabus Alignment</h3>
+                    <p>Every concept is mapped directly to your syllabus structure for perfect exam preparation.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔗</div>
+                    <h3>Smart Cross-Referencing</h3>
+                    <p>Information from multiple sources is merged intelligently, eliminating redundancy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Tables & Diagrams</h3>
+                    <p>Charts, formulas, and visual content are preserved and embedded with proper captions.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3>Academic Quality</h3>
+                    <p>Clear academic language suitable for undergraduate to graduate level studies.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📥</div>
+                    <h3>Print-Ready PDF</h3>
+                    <p>Download a professionally formatted PDF with table of contents, headings, and page numbers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to your comprehensive master notes</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Your Syllabus</h3>
+                        <p>Start by uploading your course syllabus. This becomes the blueprint for your master notes structure.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Study Materials</h3>
+                        <p>Upload up to 50 study materials - PDFs, presentations, documents, or scanned notes.</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Download Master Notes</h3>
+                        <p>Our AI synthesizes everything and delivers a comprehensive, publication-ready PDF.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <h2 class="section-title">Create Your Master Notes</h2>
+            <p class="section-subtitle">Upload your materials and let our AI do the heavy lifting</p>
+            
+            <div class="upload-container">
+                <!-- Syllabus Upload -->
+                <div class="upload-box" id="syllabus-upload">
+                    <div class="upload-icon">📋</div>
+                    <h3>Step 1: Upload Syllabus</h3>
+                    <p>Drag & drop your syllabus here or click to browse</p>
+                    <label for="syllabus-input" class="visually-hidden">Upload syllabus file</label>
+                    <input type="file" id="syllabus-input" accept=".pdf,.doc,.docx,.txt" aria-label="Upload syllabus file" hidden>
+                    <button class="btn btn-outline" id="syllabus-btn" type="button">
+                        Choose File
+                    </button>
+                    <div class="file-info" id="syllabus-info"></div>
+                </div>
+                
+                <!-- Materials Upload -->
+                <div class="upload-box" id="materials-upload">
+                    <div class="upload-icon">📚</div>
+                    <h3>Step 2: Upload Study Materials</h3>
+                    <p>Drag & drop your files here (up to 50 files)</p>
+                    <label for="materials-input" class="visually-hidden">Upload study materials</label>
+                    <input type="file" id="materials-input" accept=".pdf,.ppt,.pptx,.doc,.docx,.txt,.jpg,.png" aria-label="Upload study materials" multiple hidden>
+                    <button class="btn btn-outline" id="materials-btn" type="button">
+                        Choose Files
+                    </button>
+                    <div class="file-list" id="materials-list"></div>
+                </div>
+            </div>
+            
+            <!-- Course Info -->
+            <div class="course-info-form">
+                <div class="form-group">
+                    <label for="subject-name">Subject Name</label>
+                    <input type="text" id="subject-name" placeholder="e.g., Data Structures and Algorithms">
+                </div>
+                <div class="form-group">
+                    <label for="course-code">Course Code (Optional)</label>
+                    <input type="text" id="course-code" placeholder="e.g., CS201">
+                </div>
+            </div>
+            
+            <!-- Generate Button -->
+            <div class="generate-section">
+                <button class="btn btn-primary btn-large" id="generate-btn">
+                    <span class="btn-icon">⚡</span>
+                    Generate Master Notes
+                </button>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section" id="progress-section" style="display: none;">
+                <h3>Processing Your Materials...</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-status" id="progress-status">Analyzing syllabus...</div>
+                <div class="progress-steps">
+                    <div class="progress-step" id="step-1">
+                        <span class="step-check">✓</span>
+                        <span>Syllabus Analysis</span>
+                    </div>
+                    <div class="progress-step" id="step-2">
+                        <span class="step-check">✓</span>
+                        <span>Content Extraction</span>
+                    </div>
+                    <div class="progress-step" id="step-3">
+                        <span class="step-check">✓</span>
+                        <span>Cross-Referencing</span>
+                    </div>
+                    <div class="progress-step" id="step-4">
+                        <span class="step-check">✓</span>
+                        <span>PDF Generation</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Download Section -->
+            <div class="download-section" id="download-section" style="display: none;">
+                <div class="success-icon">✅</div>
+                <h3>Your Master Notes are Ready!</h3>
+                <p>Download your comprehensive study guide below</p>
+                <button class="btn btn-primary btn-large" id="download-btn" type="button">
+                    <span class="btn-icon">📥</span>
+                    Download PDF
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Output Preview Section -->
+    <section class="output-preview">
+        <div class="container">
+            <h2 class="section-title">What You'll Get</h2>
+            <p class="section-subtitle">A professionally formatted, comprehensive master note</p>
+            
+            <div class="preview-features">
+                <div class="preview-item">
+                    <span class="preview-icon">📑</span>
+                    <h4>Title Page</h4>
+                    <p>Subject name, course code, and compilation info</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-icon">📖</span>
+                    <h4>Table of Contents</h4>
+                    <p>Auto-generated navigation</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-icon">📝</span>
+                    <h4>Syllabus Sections</h4>
+                    <p>Organized by your syllabus structure</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-icon">📊</span>
+                    <h4>Figures & Tables</h4>
+                    <p>Embedded with proper captions</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-icon">💡</span>
+                    <h4>Key Takeaways</h4>
+                    <p>Summaries at end of each section</p>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-icon">🔍</span>
+                    <h4>Index</h4>
+                    <p>Consolidated reference index</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">Master Note Synthesizer</span>
+                </div>
+                <p class="footer-tagline">Transform your study materials into comprehensive master notes.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Master Note Synthesizer. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
